@@ -1,0 +1,3 @@
+# Middleware directory
+# Custom middleware functions (auth, validation, etc.) will be placed here
+

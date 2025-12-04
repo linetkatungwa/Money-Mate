@@ -1,0 +1,142 @@
+/* Reuse TransactionModal styles, savings-specific adjustments */
+.savings-modal {
+  max-width: 600px;
+}
+
+.savings-form {
+  padding: var(--spacing-lg);
+}
+
+.savings-form .form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.savings-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.savings-form label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+.savings-form input,
+.savings-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--grey-300);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.savings-form input:focus,
+.savings-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.savings-form input:disabled,
+.savings-form textarea:disabled {
+  background: var(--grey-100);
+  cursor: not-allowed;
+}
+
+.savings-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error-message {
+  background: #ffebee;
+  color: var(--error);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--text-sm);
+  border-left: 4px solid var(--error);
+}
+
+.modal-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--grey-300);
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0000CC;
+  box-shadow: 0 4px 12px rgba(0, 0, 255, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--grey-200);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--grey-300);
+}
+
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive - Web App Only */
+@media (max-width: 1024px) {
+  .savings-form {
+    padding: var(--spacing-md);
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .savings-form .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
